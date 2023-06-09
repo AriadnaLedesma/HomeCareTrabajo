@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Mantenimiento de Empleados</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h3> Editar Empleado </h3>
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-10">
+                    <form th:action="@{/empleado/modificaEmpleado}" th:object="${empleado}" method="post">
+                        <div class="row">
+                       		<div class="form-group col-md-8">
+                                <label for="dni" class="col-form-label">DNI</label> 
+                                <input type="text" th:field="*{dni}" class="form-control" 
+                                            id="dni" placeholder="21122112" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="nombre" class="col-form-label">Nombres</label> 
+                                <input type="text" th:field="*{nombre}" class="form-control" 
+                                            id="nombre" placeholder="ej.Romeo" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="apellido" class="col-form-label">Apellidos</label> 
+                                <input type="text" th:field="*{apellido}" class="form-control" 
+                                            id="apellido" placeholder="ej. Romero" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="direccion" class="col-form-label">Direccion</label> 
+                                <input type="text" th:field="*{direccion}" class="form-control" 
+                                            id="direccion" placeholder="ej. Av. Alfonso Ugarte" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="numero" class="col-form-label">Telefono</label> 
+                                <input type="text" th:field="*{numero}" class="form-control" 
+                                            id="numero" placeholder="ej. 909888111" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="correo" class="col-form-label">Correo electronico</label> 
+                                <input type="text" th:field="*{correo}" class="form-control" 
+                                            id="correo" placeholder="ej. rospalacios@gmail" />
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <input type="submit" class="btn btn-primary" value=" Submit ">
+                            </div>
+
+                          <input type="hidden" id="id" th:field="*{id}">
+                       <!--  -   // <input type="hidden" id="fechaReg" th:field="*{fechaReg}">
+                            
+  					   -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

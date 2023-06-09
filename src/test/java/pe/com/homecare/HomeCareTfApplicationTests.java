@@ -1,0 +1,13 @@
+package pe.com.homecare;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class HomeCareTfApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
